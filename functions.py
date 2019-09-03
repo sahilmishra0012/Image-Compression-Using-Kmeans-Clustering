@@ -1,5 +1,6 @@
 import numpy as np
 from tqdm import tqdm
+
 def preprocess_image(image):
     image=image/255
     img_new=np.reshape(image, (image.shape[0] * image.shape[1], image.shape[2]))
