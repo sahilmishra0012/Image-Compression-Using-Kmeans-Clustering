@@ -4,9 +4,9 @@ import numpy as np
 from tqdm import tqdm
 from functions import centroid_initialization,preprocess_image,optimize
 
-input("Enter the file name with location")
+#input("Enter the file name with location")
 
-img=mpimg.imread('/kaggle/input/image.jpg')
+img=mpimg.imread('image.jpg')
 
 img_new=preprocess_image(img)
 

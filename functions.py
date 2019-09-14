@@ -40,7 +40,7 @@ def optimize(image,centroid,iterations):
                     s=s+image[i]
                     count=count+1
             s=s/count
-            centroids[value]=s
+            centroid[value]=s
         centroid_dictionary = nearest_centroid(image,centroid)
     return centroid_dictionary
 
