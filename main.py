@@ -10,11 +10,11 @@ img=mpimg.imread('image.jpg')
 
 img_new=preprocess_image(img)
 
-k=16
+k=3
 
 centroids=centroid_initialization(img_new,k)
 
-centroids_dictionary=optimize(img_new,centroids,3)
+centroids_dictionary,centroids=optimize(img_new,centroids,3)
 
 img_compressed=np.zeros(img_new.shape)
 
@@ -24,3 +24,5 @@ for key, value in centroids_dictionary.items():
 img_final=img_compressed.reshape((135, 165, 3))
 
 imgplot = plt.imshow(img_final)
+
+mpimg.msave('New_compressed.jpg')
